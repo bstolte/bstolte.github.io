@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="aboutme.css">
+		<!-- bxSlider CSS file -->
+		<link href="jquery.bxslider.css" rel="stylesheet" />
+		<!-- jQuery library (served from Google) -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<!-- bxSlider Javascript file -->
+		<script src="jquery.bxslider.min.js"></script>
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="about">
+				<header><strong>Brian Stolte</strong>
+				<ul>
+					<li><small>Over 10 years of product leadership, focused on building great products that let people interact, communicate and discover on the web.</small></li>
+					<li><small>Originally from Rochester, NY.  I moved to the Bay Area in 1999 and have been working in tech ever since.</small></li>
+					<li><small>brian.stolte@gmail.com - 415.425.6133</small></li>
+				</ul>
+				</header>
+			</div>
+
+			<div class="top-right-img">
+				<p><strong>Playing guitar</strong><br />
+  				<small>My biggest hobby is playing guitar.  I've been playing electric and acoustic for most of my life.  I mostly play blues, rock, fingerstyle and jazz.  I've also been in a couple of bands in SF.</small></p>
+  			</div>
+		</div>
+
+		<div class="middle">
+			<div class="head"><img src="http://i.imgur.com/giSKiTQ.png?1"></div>
+		</div>
+
+		<div class="bottom">
+			<div class="bottom-left-img">
+				<p><strong>Cooking</strong><br />
+  				<small>I also enjoy cooking.  I enjoy finding good ingredients and I enjoy the process of preparing and cooking food.  Italian, stews and breakfast are my specialities.</small></p>
+			</div>
+			<div class="carousel">
+				<ul class="bxslider">
+	  				<li><img src="http://i.imgur.com/uQFRtLf.jpg" /></li>
+	  				<li><img src="http://i.imgur.com/ieyNm57.jpg" /></li>
+	  				<li><img src="http://i.imgur.com/paFGc3f.jpg" /></li>
+	  				<li><img src="http://i.imgur.com/Lp75yC0.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+		<script>
+		<!--For the image carousel-->
+		$(document).ready(function(){
+  			$('.bxslider').bxSlider();
+		});
+
+		<!-- show the top right image descriptions -->
+		$('.top-right-img').on('click', function() {
+      		$(this).toggleClass('show-description');
+  		});
+
+  		<!-- show the bottom left image descriptions -->
+		$('.bottom-left-img').on('click', function() {
+      		$(this).toggleClass('show-description');
+  		});
+		</script>
 </html>
